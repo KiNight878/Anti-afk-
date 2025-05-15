@@ -1,0 +1,131 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #3f0071);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #d9a8ff;
+  text-shadow: 0 0 10px #a855f7;
+  margin-bottom: 30px;
+  animation: slideDown 0.6s ease-out;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+input[type="file"] {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #4b0082;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  margin-bottom: 20px;
+}
+
+input[type="file"]:hover {
+  background-color: #7c3aed;
+}
+
+textarea {
+  width: 100%;
+  height: 300px;
+  background: #2d2d4d;
+  border: none;
+  border-radius: 10px;
+  color: #e0e0ff;
+  padding: 15px;
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+  resize: vertical;
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+textarea:focus {
+  outline: none;
+  transform: scale(1.01);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: #8000ff;
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #8000ff90;
+}
+
+button:hover {
+  background-color: #a855f7;
+  transform: scale(1.05);
+}
+
+/* Toast de notificação */
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #4a007a;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 14px 20px;
+  position: fixed;
+  bottom: 30px;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+  box-shadow: 0 0 15px #b267f5;
+  font-size: 16px;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
