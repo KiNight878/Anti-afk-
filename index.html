@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>📂 Visualizador de Código</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📂 Visualizador de Código</h1>
+
+  <div class="container">
+    <input type="file" id="fileInput" accept=".txt,.html,.js,.css,.json,.md">
+
+    <textarea id="codeBox" placeholder="📜 O conteúdo do arquivo aparecerá aqui..."></textarea>
+
+    <div class="buttons">
+      <button onclick="copyToClipboard()">📋 Copiar Código</button>
+      <button onclick="resetEditor()">♻️ Resetar</button>
+    </div>
+  </div>
+
+  <div id="toast">🔔 Notificação</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
